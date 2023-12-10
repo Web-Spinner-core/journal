@@ -1,8 +1,13 @@
 import { RootLayout } from '@/app/layout';
 import { ContentArea } from '@/components/ContentArea';
 import { Sidebar } from '@/components/Sidebar';
+import React from "react";
 
-export default function DashboardLayout({ children }) {
+interface DashboardLayoutProps {
+  children: React.ReactNode;
+}
+
+export default function DashboardLayout({ children }: DashboardLayoutProps) {
   return (
     <RootLayout>
       <Sidebar userName="John Smith" menuItems={[{label: 'Profile'}, {label: 'Settings'}]} />
